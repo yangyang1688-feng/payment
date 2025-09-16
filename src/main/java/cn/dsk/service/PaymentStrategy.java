@@ -1,9 +1,6 @@
 package cn.dsk.service;
 
-import cn.dsk.domain.PaymentRequest;
-import cn.dsk.domain.PaymentResult;
-import cn.dsk.domain.RefundRequest;
-import cn.dsk.domain.RefundResult;
+import cn.dsk.domain.*;
 
 /**
  * 支付策略接口
@@ -20,7 +17,7 @@ public interface PaymentStrategy {
      * @author: yangfeng
      * @date: 2025/9/16 10:56
      **/
-    PaymentResult pay(PaymentRequest request);
+    PaymentResult pay(Order request);
    /**
     * 退款方法
     * @param request

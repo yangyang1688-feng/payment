@@ -1,9 +1,6 @@
 package cn.dsk.service;
 
-import cn.dsk.domain.PaymentRequest;
-import cn.dsk.domain.PaymentResult;
-import cn.dsk.domain.RefundRequest;
-import cn.dsk.domain.RefundResult;
+import cn.dsk.domain.*;
 import cn.dsk.enums.PaymentTypeEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -19,7 +16,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class WechatPay implements PaymentStrategy {
     @Override
-    public PaymentResult pay(PaymentRequest request) {
+    public PaymentResult pay(Order request) {
         return new PaymentResult(true, "微信支付成功","WX123456789");
     }
 

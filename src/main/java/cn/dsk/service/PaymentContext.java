@@ -1,7 +1,6 @@
 package cn.dsk.service;
 
 import cn.dsk.domain.Order;
-import cn.dsk.domain.PaymentRequest;
 import cn.dsk.domain.PaymentResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -17,7 +16,7 @@ public class PaymentContext {
         this.strategyFactory = strategyFactory;
     }
     
-    public PaymentResult executePayment(PaymentRequest order) {
+    public PaymentResult executePayment(Order order) {
         PaymentStrategy strategy = strategyFactory.getStrategy(order.getPaymentType().getCode());
         return strategy.pay(order);
     }

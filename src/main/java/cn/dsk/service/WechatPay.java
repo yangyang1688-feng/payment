@@ -17,11 +17,13 @@ import org.springframework.stereotype.Service;
 public class WechatPay implements PaymentStrategy {
     @Override
     public PaymentResult pay(Order request) {
+        log.info("微信支付开始，订单号：{}，金额：{}",request.getOrderNo(),request.getAmount());
         return new PaymentResult(true, "微信支付成功","WX123456789");
     }
 
     @Override
     public RefundResult refund(RefundRequest request) {
+        log.info("微信退款开始，订单号：{}，金额：{}",request.getOrderNo(),request.getAmount());
         return new RefundResult(true, "退款成功","WX123456789");
     }
 

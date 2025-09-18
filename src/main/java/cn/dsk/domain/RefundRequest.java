@@ -2,6 +2,8 @@ package cn.dsk.domain;
 
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 /**
  * 退款请求
  * @ClassName RefundRequest
@@ -11,5 +13,7 @@ import lombok.Data;
  */
 @Data
 public class RefundRequest {
+    private String orderNo;
+    private BigDecimal amount;
 
 }

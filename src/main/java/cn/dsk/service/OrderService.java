@@ -1,5 +1,6 @@
 package cn.dsk.service;
 
+import cn.dsk.domain.Order;
 import cn.dsk.enums.OrderStatusEnum;
 
 /**
@@ -13,4 +14,8 @@ import cn.dsk.enums.OrderStatusEnum;
 public interface OrderService {
 
     void updateOrderStatus(Long orderId, OrderStatusEnum status);
+
+    Order createOrder(Order order);
+
+    Order getOrderByNo(String orderNo);
 }

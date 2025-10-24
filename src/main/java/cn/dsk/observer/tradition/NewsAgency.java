@@ -4,7 +4,13 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * 具体被观察者：实现了Subject接口，维护了具体的状态，通知所有观察者其状态变化
+ * @ClassName NewsAgency
+ * @Author yangfeng
+ * @Date 2025/10/23 17:57
+ * @Version 1.0
+ */
 @Component // 交给 Spring 管理
 public class NewsAgency implements Subject {
     private final List<Observer> observers = new ArrayList<>();

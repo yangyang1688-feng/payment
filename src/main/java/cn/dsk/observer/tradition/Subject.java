@@ -1,7 +1,7 @@
 package cn.dsk.observer.tradition;
 
 /**
- * 主题接口
+ * 主题接口（被观察者角色）知道它的观察者，提供添加和删除观察者的方法，并在自身状态发生变化时通知观察者
  * @ClassName Subject
  * @Author yangfeng
  * @Date 2025/9/18 10:58
